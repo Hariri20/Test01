@@ -1,4 +1,4 @@
-package webtests;
+package WebTest2;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -74,15 +74,14 @@ public class WebTest {
 
 
     }
-/*
-    @Test
-    void Test02()
-    {
-
-        driver.findElement(By.cssSelector("a[aria-label='forms']")).click();
-        driver.findElement(By.id("name")).sendKeys("Iman");
-    }
-*/
+    /*
+        @Test
+        void Test02()
+        {
+            driver.findElement(By.cssSelector("a[aria-label='forms']")).click();
+            driver.findElement(By.id("name")).sendKeys("Iman");
+        }
+    */
     @AfterEach
     public void cleanup()
     {
