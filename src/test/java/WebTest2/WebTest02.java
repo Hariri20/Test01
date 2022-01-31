@@ -10,10 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.net.MalformedURLException;
 
-
-
-
-
 public class WebTest02 {
 
     protected WebDriver driver;
