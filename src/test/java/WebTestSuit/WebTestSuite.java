@@ -55,7 +55,7 @@ public class WebTestSuite extends BaseTestSuit
         new WebDriverWait(driver,10).until(d -> myForm.isPopupIsVisible());
 
         String expected = "Thanks for your feedback "+ name;
-        // asset that the thank you message pop-up with the right message
+        // asset that the thanks message pop-up with the right message
 
         Assertions.assertEquals(expected,myForm.getPopupMessage());
     }

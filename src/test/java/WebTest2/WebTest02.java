@@ -65,7 +65,7 @@ public class WebTest02 {
     {
         if(driver != null)
         {
-            //driver.quit();
+            driver.quit();
         }
     }
 

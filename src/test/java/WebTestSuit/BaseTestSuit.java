@@ -26,7 +26,7 @@ public class BaseTestSuit
     {
         if(driver != null)
         {
-           //driver.quit();
+           driver.quit();
         }
     }
 }

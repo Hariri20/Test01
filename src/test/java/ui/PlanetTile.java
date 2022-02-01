@@ -23,13 +23,19 @@ public class PlanetTile {
         return element.findElement(By.cssSelector(".distance")).getText();
     }
 
-    public int intDistance()
+    public Long intDistance()
     {
         String distance = element.findElement(By.cssSelector(".distance")).getText();
         String[] distanceText = distance.split("k");
 
-        int intDistance = Integer.parseInt((distanceText[0].replace(",","").trim()));
-
+        //int intDistance = Integer.parseInt((distanceText[0].replace(",","").trim()));
+        Long intDistance = Long.parseLong((distanceText[0].replace(",","").trim()));
         return intDistance;
+    }
+
+    public void ClickExploreButton()
+    {
+        element.findElement(By.tagName("button")).click();
+
     }
 }
