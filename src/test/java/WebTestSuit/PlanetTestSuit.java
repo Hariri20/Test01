@@ -1,38 +1,44 @@
 package WebTestSuit;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import ui.FormsPage;
-import ui.Menu;
-import ui.States;
-public class PlanetTestSuit extends BaseTestSuit{
+import org.openqa.selenium.WebElement;
+import ui.*;
+import org.openqa.selenium.By;
 
+import java.util.List;
+
+public class PlanetTestSuit extends BaseTestSuit{
+    protected Menu menu;
+    /*
     @Test
     public void test01() throws InterruptedException
     {
-        Menu myMenu = new Menu(driver);
-        myMenu.clickForms();
-        FormsPage myForm = new FormsPage(driver);
-        myForm.clickSubmit();
-        Assertions.assertEquals("Your name is required", myForm.getNameErrorMessage());
-        Assertions.assertEquals("Your email is required", myForm.getEmailErrorMessage());
-        Assertions.assertEquals("You must agree to continue", myForm.getNameAgreeMessage());
-
+        menu = new Menu(driver);
+        menu.clickPlanet();
+        String jupiterDistance = driver.findElement(By.cssSelector("ul[class='planets'] li:nth-child(5) dd.distance")).getText();
+        Assertions.assertEquals("778,500,000 km", jupiterDistance);
     }
+
+     */
 
     @Test
-    public void test02()
+    public void test02() throws InterruptedException
     {
-        Menu myMenu = new Menu(driver);
-        myMenu.clickForms();
-        FormsPage myForm = new FormsPage(driver);
-        myForm.setName("Iman");
-        myForm.setEmail("iman@email.com");
-        myForm.openStateComboBox();
-        myForm.SelectState(States.VIC.toString());
-        myForm.selectAgree();
-        myForm.clickSubmit();
+        menu = new Menu(driver);
+        menu.clickPlanet();
+
+        var planetPage = new PlanetPage(driver);
+        var jupiter = planetPage.getPlanetByName("Jupiter");
+        //System.out.println(jupiter.getDoubleDistance());
+
+        Assertions.assertEquals("778,500,000 km",jupiter.getDistance());
+        //System.out.println(jupiter.intDistance());
+        Assertions.assertEquals(778500000,jupiter.intDistance());
+
 
     }
+
+
 }
 
 

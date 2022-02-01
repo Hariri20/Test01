@@ -15,7 +15,6 @@ public class BaseTestSuit
     public void Setup() throws MalformedURLException
     {
         driver = new ChromeDriver();
-        //chromedriver.exe -> Chrome browser
         System.setProperty("webdriver.chrome.driver", "C:\\IT\\chromedriver_win32\\chromedriver.exe");
         // go to the website
         driver.get("https://d18u5zoaatmpxx.cloudfront.net/");
@@ -27,7 +26,7 @@ public class BaseTestSuit
     {
         if(driver != null)
         {
-           driver.quit();
+           //driver.quit();
         }
     }
 }

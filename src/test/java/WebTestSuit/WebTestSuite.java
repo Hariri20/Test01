@@ -1,10 +1,12 @@
 package WebTestSuit;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import ui.*;
 
 public class WebTestSuite extends BaseTestSuit
 {
+
     @Test
     public void test01() {
             Menu myMenu = new Menu(driver);
@@ -15,6 +17,8 @@ public class WebTestSuite extends BaseTestSuit
             Assertions.assertEquals("Your email is required", myForm.getEmailErrorMessage());
             Assertions.assertEquals("You must agree to continue", myForm.getNameAgreeMessage());
     }
+
+
     @Test
     public void test02()
     {
@@ -27,6 +31,32 @@ public class WebTestSuite extends BaseTestSuit
         myForm.SelectState(States.VIC.toString());
         myForm.selectAgree();
         myForm.clickSubmit();
+    }
+
+    @Test
+    public void submitFormAndVerifyThankYOu()
+    {
+        //arrange
+        Menu myMenu = new Menu(driver);
+        myMenu.clickForms();
+        FormsPage myForm = new FormsPage(driver);
+
+        //act
+        //enter value into
+        String name = "Iman";
+        myForm.setName(name);
+        myForm.setEmail("iman@email.com");
+        myForm.openStateComboBox();
+        myForm.SelectState(States.VIC.toString());
+        myForm.selectAgree();
+        myForm.clickSubmit();
+
+        new WebDriverWait(driver,20).until(d -> myForm.isPopupIsVisible());
+
+        String expected = "Thanks for your feedback "+ name;
+        // asset that the thank you message pop-up witht the right message
+
+        Assertions.assertEquals(expected,myForm.getPopupMessage());
     }
 }
 

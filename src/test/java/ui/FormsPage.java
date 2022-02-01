@@ -34,7 +34,7 @@ public class FormsPage {
 
     public void selectAgree()
     {
-
+        driver.findElement(By.cssSelector(".v-input--selection-controls__ripple")).click();
     }
 
     public void clickSubmit()
@@ -55,6 +55,8 @@ public class FormsPage {
         }
     }
 
+
+
     public String getNameErrorMessage()
     {
         return driver.findElement(By.id("name-err")).getText();
@@ -70,4 +72,13 @@ public class FormsPage {
     }
 
 
+    public boolean isPopupIsVisible()
+    {
+        return driver.findElement(By.cssSelector(".snackbar")).isDisplayed();
+    }
+
+    public String getPopupMessage()
+    {
+        return driver.findElement(By.cssSelector(".snackbar")).getText();
+    }
 }
