@@ -8,7 +8,8 @@ public class WebTestSuite extends BaseTestSuit
 {
 
     @Test
-    public void test01() {
+    public void ValidationErrorsAreDisplayed()
+    {
             Menu myMenu = new Menu(driver);
             myMenu.clickForms();
             FormsPage myForm = new FormsPage(driver);
@@ -20,7 +21,7 @@ public class WebTestSuite extends BaseTestSuit
 
 
     @Test
-    public void test02()
+    public void SubmitFormTest()
     {
         Menu myMenu = new Menu(driver);
         myMenu.clickForms();
@@ -51,10 +52,10 @@ public class WebTestSuite extends BaseTestSuit
         myForm.selectAgree();
         myForm.clickSubmit();
 
-        new WebDriverWait(driver,20).until(d -> myForm.isPopupIsVisible());
+        new WebDriverWait(driver,10).until(d -> myForm.isPopupIsVisible());
 
         String expected = "Thanks for your feedback "+ name;
-        // asset that the thank you message pop-up witht the right message
+        // asset that the thank you message pop-up with the right message
 
         Assertions.assertEquals(expected,myForm.getPopupMessage());
     }
