@@ -32,9 +32,9 @@ public class WebTest {
 
         var chromeOptions = new ChromeOptions();
         driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"),chromeOptions);
-        driver.manage().window().maximize();
-        driver.get("https://d18u5zoaatmpxx.cloudfront.net/");
 
+        driver.get("https://d18u5zoaatmpxx.cloudfront.net/");
+        driver.manage().window().maximize();
 
         //chromedriver.exe -> Chrome browser
        // System.setProperty("webdriver.chrome.driver", "C:\\IT\\chromedriver_win32\\chromedriver.exe");
