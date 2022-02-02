@@ -1,17 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.accesshq.test.WebTest2.WebTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.785 s <<< FAILURE! - in com.accesshq.test.WebTest2.WebTest
-TestFormsPageTest  Time elapsed: 6.784 s  <<< ERROR!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"css selector","selector":"a[aria-label='forms']"}
-  (Session info: chrome=97.0.4692.99)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'LAPTOP-UM2SQ17F', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [31a71f3147dd97f672d7f15c50135f2d, findElement {using=css selector, value=a[aria-label='forms']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\imanh\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63409}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63409/devtoo..., se:cdpVersion: 97.0.4692.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 31a71f3147dd97f672d7f15c50135f2d
-	at com.accesshq.test.WebTest2.WebTest.TestFormsPageTest(WebTest.java:54)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.576 s - in com.accesshq.test.WebTest2.WebTest

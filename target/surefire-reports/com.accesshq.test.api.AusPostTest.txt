@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.accesshq.test.api.AusPostTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.85 s - in com.accesshq.test.api.AusPostTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.277 s - in com.accesshq.test.api.AusPostTest
