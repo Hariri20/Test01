@@ -27,23 +27,23 @@ public class WebTest {
     @BeforeEach
     public void Setup() throws MalformedURLException
     {
-        /*
+
         //For selenium driver
 
         var chromeOptions = new ChromeOptions();
-        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),chromeOptions);
+        driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"),chromeOptions);
         driver.manage().window().maximize();
         driver.get("https://d18u5zoaatmpxx.cloudfront.net/");
-        */
+
 
         //chromedriver.exe -> Chrome browser
        // System.setProperty("webdriver.chrome.driver", "C:\\IT\\chromedriver_win32\\chromedriver.exe");
-
+/*
         driver = new ChromeDriver();
         // go to the website
         driver.get("https://d18u5zoaatmpxx.cloudfront.net/");
         driver.manage().window().maximize();
-
+*/
     }
 
 
