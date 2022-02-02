@@ -1,4 +1,37 @@
 -------------------------------------------------------------------------------
 Test set: com.accesshq.test.WebTestSuit.WebTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.75 s - in com.accesshq.test.WebTestSuit.WebTest
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 9.033 s <<< FAILURE! - in com.accesshq.test.WebTestSuit.WebTest
+submitFormAndVerifyThankYOu  Time elapsed: 2.991 s  <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'LAPTOP-UM2SQ17F', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+Capabilities {}
+Caused by: java.io.UncheckedIOException: java.net.UnknownHostException: selenium-hub
+Caused by: java.net.UnknownHostException: selenium-hub
+
+SubmitFormTest  Time elapsed: 3.019 s  <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'LAPTOP-UM2SQ17F', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+Capabilities {}
+Caused by: java.io.UncheckedIOException: java.net.UnknownHostException: selenium-hub
+Caused by: java.net.UnknownHostException: selenium-hub
+
+ValidationErrorsAreDisplayed  Time elapsed: 3.018 s  <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'LAPTOP-UM2SQ17F', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+Capabilities {}
+Caused by: java.io.UncheckedIOException: java.net.UnknownHostException: selenium-hub
+Caused by: java.net.UnknownHostException: selenium-hub
+

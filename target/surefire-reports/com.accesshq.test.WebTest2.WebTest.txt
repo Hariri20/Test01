@@ -1,4 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: com.accesshq.test.WebTest2.WebTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.576 s - in com.accesshq.test.WebTest2.WebTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.266 s <<< FAILURE! - in com.accesshq.test.WebTest2.WebTest
+TestFormsPageTest  Time elapsed: 4.264 s  <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'LAPTOP-UM2SQ17F', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+Capabilities {}
+	at com.accesshq.test.WebTest2.WebTest.Setup(WebTest.java:34)
+Caused by: java.io.UncheckedIOException: java.net.UnknownHostException: selenium-hub
+	at com.accesshq.test.WebTest2.WebTest.Setup(WebTest.java:34)
+Caused by: java.net.UnknownHostException: selenium-hub
+	at com.accesshq.test.WebTest2.WebTest.Setup(WebTest.java:34)
+
