@@ -50,27 +50,23 @@ public class PlanetPage
 
    }
 
+    public Boolean isPopupIsVisible()
+    {
+        return driver.findElement(By.cssSelector(".snackbar")).isDisplayed();
+    }
+
+
     public String getExploreMessage()
     {
 
         return driver.findElement(By.cssSelector(".snackbar")).getText();
     }
 
-    public Boolean isPopupIsVisible()
-    {
-
-        return driver.findElement(By.cssSelector(".snackbar")).isDisplayed();
-
-    }
-
     public PlanetTile getFurthestDistancePlanet()
     {
-
         PlanetTile furthestPlanet = null;
-
         var planets =driver.findElements(By.className("planet"));
         long furthestDistance = 0;
-
         for(WebElement planet: planets)
         {
             var currentPlanet = new PlanetTile(planet);

@@ -9,7 +9,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.net.MalformedURLException;
+
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
+
+import java.net.URL;
 import java.util.Locale;
 
 
@@ -22,13 +27,23 @@ public class WebTest {
     @BeforeEach
     public void Setup() throws MalformedURLException
     {
+
+        var chromeOptions = new ChromeOptions();
+        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),chromeOptions);
+        driver.manage().window().maximize();
+        driver.get("https://d18u5zoaatmpxx.cloudfront.net/");
+
+        /*
         //chromedriver.exe -> Chrome browser
         System.setProperty("webdriver.chrome.driver", "C:\\IT\\chromedriver_win32\\chromedriver.exe");
+
         driver = new ChromeDriver();
         // go to the website
         driver.get("https://d18u5zoaatmpxx.cloudfront.net/");
         driver.manage().window().maximize();
+      */
     }
+
 
     @Test
     void TestFormsPage()
@@ -82,12 +97,13 @@ public class WebTest {
             driver.findElement(By.id("name")).sendKeys("Iman");
         }
     */
+
     @AfterEach
     public void cleanup()
     {
         if(driver != null)
         {
-            //driver.quit();
+            driver.quit();
         }
     }
 

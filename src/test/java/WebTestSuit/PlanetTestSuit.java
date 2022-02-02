@@ -46,17 +46,14 @@ public class PlanetTestSuit extends BaseTestSuit{
         menu = new Menu(driver);
         menu.clickPlanet();
         var planetPage = new PlanetPage(driver);
-
         //Act
         PlanetTile planet = planetPage.getPlanetTile(new DistanceMatch(108_200_000));
         planet.ClickExploreButton();
         String planetName = planet.getPlanetName();
-        String expected = "Exploring " +planetName;
+        String expected = "Exploring " + planetName;
         new WebDriverWait(driver,10).until(d -> planetPage.isPopupIsVisible());
-
         //Assert
         Assertions.assertEquals(expected, planetPage.getExploreMessage());
-
     }
 
     @Test
@@ -66,13 +63,12 @@ public class PlanetTestSuit extends BaseTestSuit{
         menu = new Menu(driver);
         menu.clickPlanet();
         var planetPage = new PlanetPage(driver);
-
         //Act
         PlanetTile planet = planetPage.getFurthestDistancePlanet();
-
         //Assert
         Assertions.assertEquals("Uranus",planet.getPlanetName());
-
+        System.out.println(planet.getPlanetName());
+        System.out.println(planet.intDistance());
     }
 
 
