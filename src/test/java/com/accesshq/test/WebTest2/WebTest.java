@@ -37,7 +37,7 @@ public class WebTest {
         */
 
         //chromedriver.exe -> Chrome browser
-        System.setProperty("webdriver.chrome.driver", "C:\\IT\\chromedriver_win32\\chromedriver.exe");
+       // System.setProperty("webdriver.chrome.driver", "C:\\IT\\chromedriver_win32\\chromedriver.exe");
 
         driver = new ChromeDriver();
         // go to the website

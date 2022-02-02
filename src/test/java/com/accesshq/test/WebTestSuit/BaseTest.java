@@ -15,7 +15,7 @@ public class BaseTest
     public void Setup() throws MalformedURLException
     {
         driver = new ChromeDriver();
-        System.setProperty("webdriver.chrome.driver", "C:\\IT\\chromedriver_win32\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\IT\\chromedriver_win32\\chromedriver.exe");
         // go to the website
         driver.get("https://d18u5zoaatmpxx.cloudfront.net/");
         driver.manage().window().maximize();
